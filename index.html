@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link rel="stylesheet" type="text/css" href="df_style.css"/>
+    <title>Student activities on GitHub</title>
+    <py-env>
+        - youtube_transcript_api
+    </py-env>
+</head>
+<body>
+    <b>Ask for youtube movie meta data</b>
+    <p id="metadata"></p>
+    <py-script>
+        from youtube_transcript_api import YouTubeTranscriptApi
+        transcript_list = YouTubeTranscriptApi.list_transcripts('wxznTygnRfQ')
+        pyscript.write("metadata", "Test")
+    </py-script>
+</body>
+</html>
